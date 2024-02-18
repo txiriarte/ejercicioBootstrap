@@ -1,158 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Administración de Rutas de Montaña</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .logo {
-      height: 75px;
-      width: auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Rutas de Montaña</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .logo {
+            height: 75px;
+            width: auto;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container-fluid">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="images/admin/logo_admin.png" alt="Logo" class="logo">
-          Rutas de Montaña
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Usuarios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Rutas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Configuración</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="row mt-4">
-      <!-- Navbar -->
-      <div class="col-md-3">
-        <nav class="navbar navbar-light bg-light">
-          <div class="container-fluid">
-            <div class="navbar-brand">Menú</div>
-          </div>
-          <ul class="navbar-nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Explorar Rutas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Añadir Nueva Ruta</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Usuarios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Configuración</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <!-- Content -->
-      <div class="col-md-9">
-        <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#">Usuarios</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Ver Usuarios</li>
-          </ol>
-        </nav>
-
-        <!-- Table 1 -->
-        <h2>Usuarios</h2>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nick</th>
-              <th scope="col">Correo Electrónico</th>
-              <th scope="col">Rol</th>
-              <th scope="col">Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>macaqueruta</td>
-              <td>maicu_75@gmail.com</td>
-              <td>Estandar</td>
-              <td>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
-                  Editar
+    <div class="container-fluid">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/admin/logo_admin.png" alt="Logo" class="logo">
+                    Rutas de Montaña
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <button type="button" class="btn btn-danger">Eliminar</button>
-              </td>
-            </tr>
-            <!-- Add more rows for additional users -->
-            <th scope="row">2</th>
-            <td>cuencotres</td>
-            <td>joseba_urzi59@hotmail.com</td>
-            <td>Estandar</td>
-            <td>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
-                Editar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Rutas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Volver a página principal</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-          <th scope="row">2</th>
-            <td>larrogain</td>
-            <td>eusebio_larrazabal65@outlook.es</td>
-            <td>Estandar</td>
-            <td>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
-                Editar
-              </button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
+        <div class="row mt-4">
+            <!-- Navbar -->
+            <div class="col-md-3">
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <div class="navbar-brand">Menú</div>
+                    </div>
+                    <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Explorar Rutas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Añadir Nueva Ruta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Configuración</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 
-          </tbody>
-        </table>
+            <!-- Content -->
+            <div class="col-md-9">
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="#">Usuarios</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Ver Usuarios</li>
+                    </ol>
+                </nav>
 
-        <!-- Table 2 -->
-        <h2>Rutas de Montaña</h2>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nombre de la Ruta</th>
-              <th scope="col">Dificultad</th>
-              <th scope="col">Longitud</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Lakartxela</td>
-              <td>Fácil</td>
-              <td>9,04 km</td>
-            </tr>
-            <!-- Add more rows for additional routes -->
-          </tbody>
-        </table>
+                <!-- Table 1 -->
+                <h2>Usuarios</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nick</th>
+                            <th scope="col">Correo Electrónico</th>
+                            <th scope="col">Rol</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>macaqueruta</td>
+                            <td>maicu_75@gmail.com</td>
+                            <td>Estandar</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#editModal1">
+                                    Ver foto de perfil
+                                </button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows for additional users -->
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>cuencotres</td>
+                            <td>joseba_urzi59@hotmail.com</td>
+                            <td>Estandar</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#editModal2">
+                                    Ver foto de perfil
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                </button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>larrogain</td>
+                            <td>eusebio_larrazabal65@outlook.es</td>
+                            <td>Estandar</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#editModal3">
+                                    Ver foto de perfil
+
+                                </button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>admin</td>
+                            <td>mendiexplorer@microsoft.es</td>
+                            <td>Administrador</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#editModal4">
+                                    Ver foto de perfil
+
+                                </button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Table 2 -->
+                <h2>Rutas de Montaña</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre de la Ruta</th>
+                            <th scope="col">Dificultad</th>
+                            <th scope="col">Longitud</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Lakartxela</td>
+                            <td>Fácil</td>
+                            <td>9,04 km</td>
+                        </tr>
+                        <!-- Add more rows for additional routes -->
+                    </tbody>
+                </table>
+
+                <!-- Modals -->
+                <!-- Modal 1 -->
+                <div class="modal fade" id="editModal1" tabindex="-1" aria-labelledby="editModal1Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- <h5 class="modal-title" id="editModal1Label">Foto de perfil</h5> -->
+                                <img src="images/admin/perfil1.jpg" class="img-fluid"
+                                    alt="No se ha podido cargar la imagen"> <button type="button" class="btn-close"
+                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Form for editing user -->
+                                <!-- You can add your form elements here -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="popover"
+                                    title="Perfil montañístico"
+                                    data-bs-content="Me llamo Maicu y soy una amante de la naturaleza y las montañas. Disfruto de caminatas suaves por senderos pintorescos, acompañada siempre por mi fiel compañero de cuatro patas, Max, mi perro. Nos encanta explorar bosques frondosos y colinas tranquilas, donde podemos disfrutar del aire fresco y los sonidos de la naturaleza. No buscamos desafíos extremos, sino más bien momentos de paz y conexión con el entorno natural. Para mí, cada excursión es una oportunidad para recargar energías y disfrutar de la belleza simple de la vida al aire libre.">Breve
+                                    descripción</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Tooltip on top">Tooltip on topp</button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal 2 -->
+                <div class="modal fade" id="editModal2" tabindex="-1" aria-labelledby="editModal2Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- <h5 class="modal-title" id="editModal2Label">Editar Usuario</h5> -->
+                                <img src="images/admin/perfil2.jpg" class="img-fluid"
+                                    alt="No se ha podido cargar la imagen">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Form for editing user -->
+                                <!-- You can add your form elements here -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="popover"
+                                    title="Perfil montañístico"
+                                    data-bs-content="Soy un amante de la naturaleza que está comenzando a disfrutar de rutas de montaña un poco más desafiantes. Me encanta explorar senderos normales también, donde puedo conectar con la naturaleza y desconectar del ajetreo diario. Últimamente, he estado buscando rutas que me brinden un poco más de emoción y desafío.">Breve descripción</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Tooltip on top">Tooltip on top</button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal 3 -->
+                <div class="modal fade" id="editModal3" tabindex="-1" aria-labelledby="editModal3Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- <h5 class="modal-title" id="editModal3Label">Editar Usuario</h5> -->
+                                <img src="images/admin/perfil3.jpg" class="img-fluid"
+                                    alt="No se ha podido cargar la imagen">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Form for editing user -->
+                                <!-- You can add your form elements here -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="popover"
+                                    title="Perfil montañístico"
+                                    data-bs-content="Kaixo, Eusebio naiz. Mendi eskalada gustatzen zait. Errutina zail eta luzeagoak proposatzeak atsegin dut. Eskalada nagusiki nire motibazio nagusia.">Breve descripción</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Tooltip on top">Tooltip on top</button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal 4 -->
+                <div class="modal fade" id="editModal4" tabindex="-1" aria-labelledby="editModal4Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- <h5 class="modal-title" id="editModal4Label">Editar Usuario</h5> -->
+                                <img src="images/admin/perfil_admin.png" class="img-fluid"
+                                    alt="No se ha podido cargar la imagen">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Form for editing user -->
+                                <!-- You can add your form elements here -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="popover"
+                                    title="Perfil montañístico"
+                                    data-bs-content="And here's some amazing content. It's very engaging. Right?">Breve
+                                    descripción</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Tooltip on top">Tooltip on top</button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+</body>
+
+</html>
