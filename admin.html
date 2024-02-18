@@ -11,6 +11,12 @@
             height: 75px;
             width: auto;
         }
+
+        .modal-body img {
+            display: block;
+            margin: auto;
+            /* Esto centrará la imagen horizontalmente */
+        }
     </style>
 </head>
 
@@ -21,7 +27,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="images/admin/logo_admin.png" alt="Logo" class="logo">
-                    Rutas de Montaña
+                    MendiExplorer
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,6 +97,8 @@
                             <th scope="col">Correo Electrónico</th>
                             <th scope="col">Rol</th>
                             <th scope="col">Acciones</th>
+                            <th scope="col">Perfil completado</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -105,6 +113,13 @@
                                     Ver foto de perfil
                                 </button>
                                 <button type="button" class="btn btn-danger">Eliminar</button>
+                            </td>
+                            <td>
+                                <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="75"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-info text-dark" style="width: 75%">75%</div>
+                                </div>
+
                             </td>
                         </tr>
                         <!-- Add more rows for additional users -->
@@ -121,6 +136,12 @@
                                 </button>
                                 <button type="button" class="btn btn-danger">Eliminar</button>
                             </td>
+                            <td>
+                                <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="50"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar text-bg-warning" style="width: 50%">50%</div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <th scope="row">3</th>
@@ -134,6 +155,13 @@
 
                                 </button>
                                 <button type="button" class="btn btn-danger">Eliminar</button>
+                            </td>
+                            <td>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="90"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success" style="width: 90%">90%</div>
+                                </div>
+
                             </td>
                         </tr>
                         <tr>
@@ -183,10 +211,21 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <!-- <h5 class="modal-title" id="editModal1Label">Foto de perfil</h5> -->
-                                <img src="images/admin/perfil1.jpg" class="img-fluid"
-                                    alt="No se ha podido cargar la imagen"> <button type="button" class="btn-close"
-                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                <img src="images/admin/perfil1.jpg" class="img-fluid p-2"
+                                    alt="No se ha podido cargar la imagen">
+
+                                    <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+                                        <div class="card-header">Mari Cruz</div>
+                                        <div class="card-body">
+                                          <h5 class="card-title">Propuestas de mejora</h5>
+                                          <p class="card-text">Recomiendo que añadáis información adicinal sobre lugares de interes en la zona de las ruta.</p>
+                                        </div>
+                                      </div>
+                                      
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
+
                             <div class="modal-body">
                                 <!-- Form for editing user -->
                                 <!-- You can add your form elements here -->
@@ -195,11 +234,11 @@
                                     data-bs-content="Me llamo Maicu y soy una amante de la naturaleza y las montañas. Disfruto de caminatas suaves por senderos pintorescos, acompañada siempre por mi fiel compañero de cuatro patas, Max, mi perro. Nos encanta explorar bosques frondosos y colinas tranquilas, donde podemos disfrutar del aire fresco y los sonidos de la naturaleza. No buscamos desafíos extremos, sino más bien momentos de paz y conexión con el entorno natural. Para mí, cada excursión es una oportunidad para recargar energías y disfrutar de la belleza simple de la vida al aire libre.">Breve
                                     descripción</button>
                                 <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title="Tooltip on top">Tooltip on topp</button>
+                                    data-bs-placement="top" title="No tienes permiso todavía">Editar mejoras</button>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-dark">Guardar Cambios</button>
                             </div>
                         </div>
                     </div>
@@ -211,8 +250,17 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <!-- <h5 class="modal-title" id="editModal2Label">Editar Usuario</h5> -->
-                                <img src="images/admin/perfil2.jpg" class="img-fluid"
+                                <img src="images/admin/perfil2.jpg" class="img-fluid p-2"
                                     alt="No se ha podido cargar la imagen">
+
+                                    <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+                                        <div class="card-header">Joseba Urzelai</div>
+                                        <div class="card-body">
+                                          <h5 class="card-title">Propuestas de mejora</h5>
+                                          <p class="card-text">Poner un lista personal de rutas realizadas y pendientes de realizar</p>
+                                        </div>
+                                      </div>
+                                      
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -221,13 +269,14 @@
                                 <!-- You can add your form elements here -->
                                 <button type="button" class="btn btn-primary" data-bs-toggle="popover"
                                     title="Perfil montañístico"
-                                    data-bs-content="Soy un amante de la naturaleza que está comenzando a disfrutar de rutas de montaña un poco más desafiantes. Me encanta explorar senderos normales también, donde puedo conectar con la naturaleza y desconectar del ajetreo diario. Últimamente, he estado buscando rutas que me brinden un poco más de emoción y desafío.">Breve descripción</button>
+                                    data-bs-content="Soy un amante de la naturaleza que está comenzando a disfrutar de rutas de montaña un poco más desafiantes. Me encanta explorar senderos normales también, donde puedo conectar con la naturaleza y desconectar del ajetreo diario. Últimamente, he estado buscando rutas que me brinden un poco más de emoción y desafío.">Breve
+                                    descripción</button>
                                 <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title="Tooltip on top">Tooltip on top</button>
+                                    data-bs-placement="top" title="No tienes permiso todavía">Editar mejoras</button>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-dark">Guardar Cambios</button>
                             </div>
                         </div>
                     </div>
@@ -239,8 +288,17 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <!-- <h5 class="modal-title" id="editModal3Label">Editar Usuario</h5> -->
-                                <img src="images/admin/perfil3.jpg" class="img-fluid"
+                                <img src="images/admin/perfil3.jpg" class="img-fluid p-2"
                                     alt="No se ha podido cargar la imagen">
+
+                                    <div class="card text-bg-success mb-3" style="max-width: 18rem;">
+                                        <div class="card-header">Eusebio Larrazabal</div>
+                                        <div class="card-body">
+                                          <h5 class="card-title">Propuestas de mejora</h5>
+                                          <p class="card-text">Hacer hincapié si hace equipo especial para rutas de escalada, o para el caso de nevadas</p>
+                                        </div>
+                                      </div>
+                                      
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -249,13 +307,14 @@
                                 <!-- You can add your form elements here -->
                                 <button type="button" class="btn btn-primary" data-bs-toggle="popover"
                                     title="Perfil montañístico"
-                                    data-bs-content="Kaixo, Eusebio naiz. Mendi eskalada gustatzen zait. Errutina zail eta luzeagoak proposatzeak atsegin dut. Eskalada nagusiki nire motibazio nagusia.">Breve descripción</button>
+                                    data-bs-content="Kaixo, Eusebio naiz. Mendi eskalada gustatzen zait. Errutina zail eta luzeagoak proposatzeak atsegin dut. Eskalada nagusiki nire motibazio nagusia.">Breve
+                                    descripción</button>
                                 <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title="Tooltip on top">Tooltip on top</button>
+                                    data-bs-placement="top" title="No tienes permiso todavía">Editar mejoras</button>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-dark">Guardar Cambios</button>
                             </div>
                         </div>
                     </div>
@@ -275,31 +334,32 @@
                             <div class="modal-body">
                                 <!-- Form for editing user -->
                                 <!-- You can add your form elements here -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="popover"
+                                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="popover"
                                     title="Perfil montañístico"
                                     data-bs-content="And here's some amazing content. It's very engaging. Right?">Breve
                                     descripción</button>
                                 <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
                                     data-bs-placement="top" title="Tooltip on top">Tooltip on top</button>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                            </div> -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-light"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-dark">Guardar Cambios</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-            return new bootstrap.Popover(popoverTriggerEl)
-        })
-    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl)
+            })
+        </script>
 </body>
 
 </html>
